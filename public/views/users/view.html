@@ -1,0 +1,14 @@
+<section data-ng-controller="AccountsController" data-ng-init="findOne()">
+    <span>{{account.name}}</span>/
+    <span>{{account.username}}</span>
+    <h2>{{account.email}}</h2>
+    <div>
+        <a class="btn" href="/#!/users/{{account._id}}/edit">
+        	<i class="icon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();">
+            <i class="icon-trash"></i>
+        </a>
+    </div>
+    <div>{{account._id}}</div>
+</section>
