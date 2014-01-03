@@ -10,6 +10,13 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
         'title': 'Create New Article',
         'link': 'articles/create'
     },
+    {
+        'title': 'Egitim Merkezleri',
+        'link': 'egitim-merkezleri'
+    }, {
+        'title': 'Yeni Eğitim Merkezi',
+        'link': 'egitim-merkezleri/create'
+    },
 	{
         'title': 'Users',
         'link': 'users'

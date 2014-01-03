@@ -40,3 +40,17 @@ exports.article = {
         next();
     }
 };
+
+/**
+ * Article authorizations routing middleware
+ */
+exports.egitimMerkezi = {
+    hasAuthorization: function(req, res, next) {
+    if (req.user.role === 'admin'){ // admine her yol acik
+            console.log(req.user.role);
+            next();
+        }
+    else 
+        return res.send(401, 'User is not authorized');
+    }
+};

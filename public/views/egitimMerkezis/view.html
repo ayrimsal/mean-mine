@@ -1,0 +1,19 @@
+<section data-ng-controller="EgitimMerkezisController" data-ng-init="findOne()">
+    <span>{{egitimMerkezi.created | date:'medium'}}</span>
+    <h2>{{egitimMerkezi.kisaltma}}</h2>
+    <h3>{{egitimMerkezi.ad}}</h3>
+    <div data-ng-show="global.user.role == 'admin'">
+        <a class="btn" href="/#!/egitim-merkezleri/{{egitimMerkezi._id}}/edit">
+        	<i class="icon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();" ng-confirm-click="Really Delete?">
+            <i class="icon-trash"></i>
+        </a>
+    </div>
+    <div>{{egitimMerkezi.icerik}}</div>
+    <div>{{egitimMerkezi.adres}}</div>
+    <div>{{egitimMerkezi.telefon}}</div>
+    <div>{{egitimMerkezi.fax}}</div>
+    <div>{{egitimMerkezi.email}}</div>
+    <div><a href="{{egitimMerkezi.url}}" target="_blank">{{egitimMerkezi.url}}</a></div>
+</section>

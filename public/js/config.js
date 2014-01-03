@@ -25,6 +25,18 @@ angular.module('mean').config(['$routeProvider',
         when('/articles/:articleId', {
             templateUrl: 'views/articles/view.html'
         }).
+        when('/egitim-merkezleri', {
+            templateUrl: 'views/egitimMerkezis/list.html'
+        }).
+        when('/egitim-merkezleri/create', {
+            templateUrl: 'views/egitimMerkezis/create.html'
+        }).
+        when('/egitim-merkezleri/:egitimMerkeziId/edit', {
+            templateUrl: 'views/egitimMerkezis/edit.html'
+        }).
+        when('/egitim-merkezleri/:egitimMerkeziId', {
+            templateUrl: 'views/egitimMerkezis/view.html'
+        }).
         when('/', {
             templateUrl: 'views/index.html'
         }).

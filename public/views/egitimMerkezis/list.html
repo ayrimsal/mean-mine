@@ -1,0 +1,10 @@
+<section data-ng-controller="EgitimMerkezisController" data-ng-init="find()">
+	<ul class="articles unstyled">
+		<li data-ng-repeat="em in egitimMerkezis">
+			<span>{{em.created | date:'medium'}}</span> 
+			<h2><a data-ng-href="#!/egitim-merkezleri/{{em._id}}">{{em.ad}} ({{em.kisaltma}}) </a></h2>
+			<div>{{em.icerik}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!egitimMerkezis || egitimMerkezis.length">No egitimMekezis yet. <br> Why don't you <a href="/#!/egitim-merkezleri/create">Create One</a>?</h1>
+</section>

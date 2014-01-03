@@ -1,0 +1,59 @@
+<section data-ng-controller="EgitimMerkezisController" data-ng-init="findOne()">
+	<form class="form-horizontal" data-ng-submit="update()">
+		<div class="control-group">
+			<label class="control-label" for="ad">Ad</label>
+
+			<div class="controls">
+				<input type="text" data-ng-model="egitimMerkezi.ad" id="ad" placeholder="ad" required>
+				</input>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="kisaltma">Kısaltma</label>
+			<div class="controls">
+				<input type="text" data-ng-model="egitimMerkezi.kisaltma" id="kisaltma" placeholder="kisaltma">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="adres">Adres</label>
+			<div class="controls">
+				<input type="text" data-ng-model="egitimMerkezi.adres" id="adres" placeholder="adres">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="telefon">Telefon</label>
+			<div class="controls">
+				<input type="text" data-ng-model="egitimMerkezi.telefon" id="telefon" placeholder="telefon">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="fax">Fax</label>
+			<div class="controls">
+				<input type="text" data-ng-model="egitimMerkezi.fax" id="fax" placeholder="fax">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="email">Email</label>
+			<div class="controls">
+				<input type="text" data-ng-model="egitimMerkezi.email" id="email" placeholder="email">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="url">Url</label>
+			<div class="controls">
+				<input type="text" data-ng-model="egitimMerkezi.url" id="url" placeholder="url">
+			</div>
+		</div>	
+		<div class="control-group">
+			<label class="control-label" for="icerik">İçerik</label>
+			<div class="controls">
+				<textarea data-ng-model="egitimMerkezi.icerik" id="icerik" cols="30" rows="10" placeholder="İçerik"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

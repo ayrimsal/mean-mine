@@ -75,6 +75,17 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
 
+    //EgitimMerkezi Routes
+    var egitimMerkezis = require('../app/controllers/egitimMerkezis');
+    app.get('/egitim-merkezleri', egitimMerkezis.all);
+    app.post('/egitim-merkezleri', auth.requiresLogin, auth.egitimMerkezi.hasAuthorization, egitimMerkezis.create);
+    app.get('/egitim-merkezleri/:egitimMerkeziId', egitimMerkezis.show);
+    app.put('/egitim-merkezleri/:egitimMerkeziId', auth.requiresLogin, auth.egitimMerkezi.hasAuthorization, egitimMerkezis.update);
+    app.del('/egitim-merkezleri/:egitimMerkeziId', auth.requiresLogin, auth.egitimMerkezi.hasAuthorization, egitimMerkezis.destroy);
+
+    //Finish with setting up the articleId param
+    app.param('egitimMerkeziId', egitimMerkezis.egitimMerkezi);
+
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);
